@@ -1,0 +1,82 @@
+.header-area .mainvisual {
+  position: relative;
+}
+.header-area .mainvisual .page-title {
+  width: 100%;
+  max-width: 300px;
+  background-color: #ffdab9;
+  border-radius: 0 30px 0 0;
+  padding: 15px 0;
+  text-align: center;
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+}
+.header-area .mainvisual .page-title .ja {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+.header-area .mainvisual .page-title .en {
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+@media screen and (max-width: 767px) {
+  .header-area .mainvisual .page-title {
+    max-width: 180px;
+    line-height: 0.8;
+  }
+  .header-area .mainvisual .page-title .ja {
+    font-size: 10px;
+  }
+  .header-area .mainvisual .page-title .en {
+    font-size: 18px;
+  }
+}
+.blog-list {
+  margin-bottom: 80px;
+}
+.blog-list .post-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 20px;
+  margin-bottom: 40px;
+}
+.blog-list .post-list li .img {
+  margin-bottom: 10px;
+}
+.blog-list .post-list li .img img {
+  border-radius: 30px;
+}
+.blog-list .post-list li time {
+  font-size: 12px;
+}
+.blog-list .post-list li .title {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.blog-list .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .blog-list {
+    margin-bottom: 60px;
+  }
+  .blog-list .post-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
