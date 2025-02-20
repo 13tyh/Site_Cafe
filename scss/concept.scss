@@ -1,0 +1,164 @@
+@charset 'utf-8';
+@use "mixin";
+
+// コンセプトページのヘッダーエリア
+.header-area {
+  .mainvisual {
+    position: relative;
+
+    .page-title {
+      width: 100%;
+      max-width: 300px;
+      background-color: #ffdab9;
+      border-radius: 0 30px 0 0;
+      padding: 15px 0;
+      text-align: center;
+      position: absolute;
+      bottom: -1px;
+      left: -1px;
+
+      .ja {
+        display: block;
+        font-size: 14px;
+        font-weight: normal;
+        margin-bottom: 5px;
+      }
+
+      .en {
+        display: block;
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+      }
+    }
+  }
+}
+
+@include mixin.mq(sp) {
+  .header-area {
+    .mainvisual {
+      .page-title {
+        max-width: 180px;
+        line-height: 0.8;
+
+        .ja {
+          font-size: 10px;
+        }
+
+        .en {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+// コンセプト
+.concept {
+  margin-bottom: 80px;
+  overflow-x: hidden;
+
+  img {
+    border-radius: 30px;
+  }
+
+  p {
+    line-height: 2;
+    margin-bottom: 40px;
+    text-align: justify;
+  }
+}
+
+.content-top {
+  display: flex;
+  justify-content: space-between;
+
+  .img-left {
+    max-width: 380px;
+    margin-top: 180px;
+  }
+
+  .text {
+    max-width: 300px;
+    margin: 90px 20px 0;
+  }
+
+  .img-right {
+    max-width: 470px;
+  }
+}
+
+.content-middle {
+  max-width: 830px;
+  width: 70vw;
+  margin: -40px -80px 0 auto;
+}
+
+.content-bottom {
+  display: flex;
+  margin-top: -40px;
+
+  .img-left {
+    max-width: 220px;
+  }
+
+  .img-right {
+    max-width: 280px;
+    margin: 250px 80px 0;
+  }
+
+  .text {
+    max-width: 280px;
+    margin-top: 380px;
+  }
+}
+
+@include mixin.mq(sp) {
+  .concept {
+    margin-bottom: 60px;
+  }
+
+  .content-top {
+    flex-direction: column-reverse;
+    margin-bottom: 40px;
+
+    .img-left {
+      margin: 0 auto;
+    }
+
+    .text {
+      max-width: 100%;
+      margin: 0;
+    }
+
+    .img-right {
+      margin: 0 auto 40px;
+    }
+  }
+
+  .content-middle {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 0 40px;
+  }
+
+  .content-bottom {
+    flex-direction: column-reverse;
+    margin-top: 0;
+
+    .img-left {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .img-right {
+      max-width: 100%;
+      margin: 0 auto 40px;
+    }
+
+    .text {
+      max-width: 100%;
+      margin-top: 0;
+    }
+  }
+}
